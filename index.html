@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+    </style>
+
+    <title>E-commerce</title>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 w-full z-50 bg-black text-white py-4 px-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="./star-removebg-preview.png" alt="logo" class="h-10 bg-white">
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex">
+                <ul class="flex space-x-12">
+                    <li><a href="#new-feature" class="hover:text-gray-400">New & Feature</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Men</a></li>
+                    <li><a href="#women" class="hover:text-gray-400">Women</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Kids</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Shoes</a></li>
+                    <li><a href="#curry" class="hover:text-gray-400">Curry</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Back to School</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Outlet</a></li>
+                </ul>
+            </nav>
+
+            <!-- Icons and Mobile Menu Toggle -->
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-gray-400"><i class="fa-solid fa-search"></i></a>
+                <a href="#" class="hover:text-gray-400"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="hover:text-gray-400"><i class="fa-solid fa-store"></i></a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-toggle" class="text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black text-white p-4">
+            <ul class="space-y-4">
+                <li><a href="#new-feature" class="hover:text-gray-400">New & Feature</a></li>
+                <li><a href="#" class="hover:text-gray-400">Men</a></li>
+                <li><a href="#women" class="hover:text-gray-400">Women</a></li>
+                <li><a href="#" class="hover:text-gray-400">Kids</a></li>
+                <li><a href="#" class="hover:text-gray-400">Shoes</a></li>
+                <li><a href="#curry" class="hover:text-gray-400">Curry</a></li>
+                <li><a href="#" class="hover:text-gray-400">Back to School</a></li>
+                <li><a href="#" class="hover:text-gray-400">Outlet</a></li>
+            </ul>
+        </div>
+    </header>
+<!-- Main Content Section -->
+    <main class="pt-24 bg-white">
+
+<!-- Hero Section -->
+        <section id="new-feature" class="relative bg-cover bg-center h-112 text-white flex">
+           <div class="grid grid-cols-1 md:grid-cols-2 w-full">
+        <div class="w-full"><img src="./img/bg 1.jpg" alt="Banner 1" class="h-full w-full object-cover"></div>
+        <div class="w-full"><img src="./img/bg 2.jpg" alt="Banner 2" class="h-full w-full object-cover"></div>
+    </div>
+<div class="absolute inset-0 flex flex-col justify-center items-center bg-black md:text-left bg-opacity-20">
+                <h1 class=" text-[50px]  md:text-[160px] tracking-wide mb-2 -translate-y-[100px]">ULTIMATE</h1>
+                <h6 class="text-2xl md:text-4xl font-light tracking-wide mt-[-30px] md:mt-[-50px]">COMFORT</h6>
+                <p class="absolute bottom-3 right-[280px] text-lg text-white">Rest & Recovery</p>
+                <a href="#" class="absolute bottom-4 right-10 text-[8px] text-blue-500 bg-white px-4 py-1 rounded shadow text-center">
+                    SHOP ALL <i class="fa fa-arrow-right ml-8"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section id="women" class="pt-20 flex relative bg-white">
+ <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Block 1 -->
+        <div class="relative flex flex-col items-center">
+            <img src="./div 2/div 1.jpg" alt="image1" class="h-[180px] w-[290px] relative left-[40px] mt-10 bg-white shadow-md p-2">
+            <img src="./div 2/div.jpg" alt="image2" class="h-[100px] w-[190px] relative left-[40px] mt-4">
+            <div class="w-[280px] h-[58px] bg-[#7FA8AA] mt-2"></div>
+        </div>
+
+            
+
+           <!-- Block 2 -->
+
+<div class="flex flex-col items-center mr-3">
+            <img src="./div 2/div3.jpg" alt="image" class="h-[420px] w-[600px]">
+            <div class="w-[580px] bg-[#7FA8AA] h-5 mt-3"></div>
+        </div>
+
+<!-- Block 3 -->
+<div class=" mt-6">
+    <h2 class="text-[30px] ml-[70px]">UNDER ARMOUR</h2>
+    <h1 class="ml-[140px] text-[30px] text-[#307271] -translate-y-4">MERIDIAN</h1>
+    <h2 class="text-[30px] -translate-y-8 p-2 ml-[70px]">COLLECTION</h2>
+    <img src="./div 2/div 4.jpg" alt="image" class="h-[120px] w-[190px] relative z-10 bg-white shadow-md p-3 ml-[100px]">
+   <p class="bg-[#7FA8AA] relative text-white text-[8px] p-2 h-[210px] w-[480px] text-[10px] flex items-center justify-center -translate-y-[40px]">
+    Discover the Under Armour Meridian collection, crafted to <br>empower women with high-performance activewear that <br> not only enhances their fitness journey but also imbues <br> confidence and style with every move.
+</p>
+<a href="#" class="absolute bottom-4 right-[149px] text-[8px] text-gray-500 bg-white px-4 py-1 rounded shadow text-center -translate-y-[50px]">
+                    SHOP MERIDIAN COLLECTION <i class="fa fa-arrow-right ml-8"></i>
+                </a>
+</div>
+
+            </div>
+</section>
+
+<section id="curry" class="relative bg-cover bg-center text-white flex flex-col md:flex-row gap-6 mt-6 mb-12 px-6">
+    <!-- Block 1 -->
+    <div class="relative flex-1">
+        <img src="./div 2/third 1.jpg" alt="banner3" class="object-cover w-full h-auto">
+        <h1 class="absolute bottom-12 mb-10 left-24 text-2xl md:text-4xl font-bold tracking-wide">STOP. POP. SHIMMY</h1>
+        <a href="#" class="absolute bottom-4 left-24 text-xs md:text-sm text-red-200 bg-white px-4 py-1 rounded shadow text-center">
+            SHOP THE CURRY COLLECTION <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="relative flex-1">
+        <img src="./div 2/istockphoto-2075354173-612x612.jpg" alt="banner4" class="object-cover w-full h-auto">
+        <h1 class="absolute bottom-10 mb-10 left-24 text-2xl md:text-4xl font-bold tracking-wide">STEALTHFORM</h1>
+        <a href="#" class="absolute bottom-4 left-24 text-xs md:text-sm text-red-200 bg-white px-4 py-1 rounded shadow text-center">
+            SHOP STEALTHFORM <i class="fa fa-long-arrow-right ml-2"></i>
+        </a>
+    </div>
+</section>
+
+
+<section class="relative"> 
+  <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
+    <!-- Heading with space below -->
+    <h4 class="text-lg font-bold text-gray-700 tracking-wide mr-8">All Sports Essentials</h4>
+
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex flex-grow justify-end space-x-12">
+        <a href="#" class="flex items-center font-bold text-gray-700 tracking-wide">Clothing</a>
+        <a href="#" class="flex items-center font-bold text-gray-700 tracking-wide">Shoes</a>
+        <a href="#" class="flex items-center font-bold text-gray-700 tracking-wide">Accessories</a>
+    </nav>
+<!-- arrows -->
+    <div class="flex space-x-3 mt-2 ml-8 justify-end">
+    <a href="#" class="hover:text-gray-400">
+    <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border ">
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </div>
+  </a>
+  
+  <!-- Box for the right arrow -->
+  <a href="#" class="hover:text-gray-400">
+    <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border ">
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </div>
+  </a>
+</div>
+</div>
+
+<!-- Product Grid -->
+ <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4 mt-6">
+    <!-- First Image Block -->
+     <div class="relative text-black">
+      <img src="img2/p1.webp" alt="image" class="w-[310px] h-[300px] object-cover">
+      <p class="font-semibold text-lg mt-2">Men's UA Meridian Long Sleeve Shirt</p>
+      <span class="relative mr-[20px] text-[10px]">Softness that can still wick sweat like a champ</span>
+      <p class="text-lg font-bold mt-1">$70.00</p>
+
+ <div class="relative mr-[20px] flex space-x-1 mt-2">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6  text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-gray-400 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+</div>
+    </div>
+
+ <div class="relative text-black ">
+<img src="img2/p2.jpeg" alt="image"class="w-[310px] h-[300px] object-cover">
+<p class="font-semibold text-lg mt-2">Women's UA Storm Forefront Rain jacket</p>
+ <span  class="relative mr-[20px] text-[10px]">The comfest, most breathable 100% waterproof jacket</span> <br>
+ <i class="mr-[20px] text-[12px] line-through">$70.00</i>
+ <i class="mr-[20px] text-[12]">$55.07</i>
+ <div class="relative mr-[20px] flex space-x-1 ">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-blue-300 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  </div>
+ </div>
+  
+ <div class="relative text-black">
+ <img src="img2/p3.webp" alt="image" class="w-[310px] h-[300px] object-cover">
+  <p class="font-semibold text-lg mt-2">Women's HeatGear"OG Compression Long Sleeve</p>
+ <i  class="relative mr-[20px] text-[10px]">Original HeatGear"— thicker compressive and ultra-cool</i> <br>
+ <i class="mr-[20px] text-[12]">$40.00</i>
+ <div class="relative mr-[20px] flex space-x-1">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-gray-200 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-blue-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  </div>
+ </div>
+ 
+ <div class="relative text-black">
+<img src="img2/p4.webp" alt="image"class="w-[310px] h-[300px] object-cover  ">
+ <p class="font-semibold text-lg mt-2">Men's Legacy black history month Windbreaker</p>
+ <i  class="relative mr-[20px] text-[10px]">Every athlete needs a-go-to Windbreaker-and this is it.</i> <br>
+ <i class="mr-[20px] text-[12]">$90.00</i>
+ <div class="relative mr-[20px] flex space-x-1">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="relative bg-cover bg-center text-white flex mt-6 mb-12">
+  <div>
+    <img src="img/bg 5.jpg" alt="banner3" class="w-full sm:w-auto object-cover">
+  </div>
+  <div class="text-black ml-8 text-3xl mt-4 space-y-2">
+    <div class="flex items-center border-b p-1">
+      <h2>Baseball</h2>
+      <span class="text-xs ml-1">[72]</span>
+    </div>
+
+    <div class="flex items-center border-b p-1">
+      <i class="fa fa-arrow-right text-lg"></i>
+      <h2 class="ml-2">Basketball</h2>
+      <span class="text-xs ml-1">[125]</span>
+      <a href="#" class="inline-flex items-center px-2 py-1 bg-black text-white text-xs rounded ml-5">SHOP ALL</a>
+    </div>
+
+    <div class="flex items-center border-b p-1">
+      <h2>Football</h2>
+      <span class="text-xs ml-1">[46]</span>
+    </div>
+
+    <div class="flex items-center border-b p-1">
+      <h2>Running</h2>
+      <span class="text-xs ml-1">[127]</span>
+    </div>
+
+    <div class="flex items-center border-b p-1">
+      <h2>Soccer</h2>
+      <span class="text-xs ml-1">[54]</span>
+    </div>
+
+    <div class="flex items-center">
+      <h2>Golf</h2>
+      <span class="text-xs ml-1">[138]</span>
+    </div>
+  </div>
+</section>
+
+           
+<section class="relative">
+  <div class="container mx-auto flex justify-between items-center px-4">
+    <!-- Heading with space below -->
+    <h4 class="text-lg font-bold text-gray-700 tracking-wide mr-8">Shoe Drops</h4>
+
+    <!-- Navigation Links -->
+    <nav class="flex-grow">
+      <ul class="flex space-x-8 justify-end">
+        <li><a href="#" class="font-bold text-gray-700 tracking-wide">Curry</a></li>
+        <li><a href="#" class="font-bold text-gray-700 tracking-wide">Running</a></li>
+        <li><a href="#" class="font-bold text-gray-700 tracking-wide">Soccer</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex space-x-3 mt-2 ml-8 justify-end">
+      <!-- Left arrow -->
+      <a href="#" class="hover:text-gray-400">
+        <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </div>
+      </a>
+      
+      <!-- Right arrow -->
+      <a href="#" class="hover:text-gray-400">
+        <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Product Images Section -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 px-8 mt-4 mb-8">
+    <!-- Image Block 1 -->
+    <div class="relative text-black">
+      <img src="img2/p6.webp" alt="Curry 11 'Dub Nation' Basketball Shoes" class="w-full h-[300px] object-cover">
+      <p class="font-semibold text-[18px] mt-2">Curry 11 'Dub Nation' Basketball Shoes</p>
+      <i class="text-[10px]">Ultimate bounce grip and stability</i>
+      <p class="text-[12px] mt-1">$160.00</p>
+      <div class="flex space-x-1 mt-2">
+        <a href="#" class="w-6 h-6 flex justify-center items-center text-blue-800 bg-white shadow border rounded-full">
+          <i class="fa fa-circle"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Image Block 2 -->
+    <div class="relative text-black">
+      <img src="img2/p7.jpeg" alt="Curry 11 'Future Wolf' Basketball Shoes" class="w-full h-[300px] object-cover">
+      <p class="font-semibold text-[18px] mt-2">Curry 11 'Future Wolf' Basketball Shoes</p>
+      <i class="text-[10px]">Specifically designed to help everyone</i>
+      <p class="text-[12px] mt-1">$160.00</p>
+      <div class="flex space-x-1 mt-2">
+        <a href="#" class="w-6 h-6 flex justify-center items-center text-gray-900 bg-white shadow border rounded-full">
+          <i class="fa fa-circle"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Image Block 3 -->
+    <div class="relative text-black">
+      <img src="img2/p8.jpeg" alt="Curry Flow 10 Team Basketball Shoes" class="w-full h-[300px] object-cover">
+      <p class="font-semibold text-[18px] mt-2">Curry Flow 10 Team Basketball Shoes</p>
+      <i class="text-[10px]">Light and ridiculously grippy</i>
+      <p class="text-[12px] mt-1">$160.00</p>
+      <div class="flex space-x-1 mt-2">
+        <a href="#" class="w-6 h-6 flex justify-center items-center text-blue-400 bg-white shadow border rounded-full">
+          <i class="fa fa-circle"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Image Block 4 -->
+    <div class="relative text-black">
+      <img src="img2/p9.webp" alt="Curry 11 Bruce Lee 'Wind' Basketball Shoes" class="w-full h-[300px] object-cover">
+      <p class="font-semibold text-[18px] mt-2">Curry 11 Bruce Lee 'Wind' Basketball Shoes</p>
+      <i class="text-[10px]">Every athlete needs a go-to Windbreaker—and this is it.</i>
+      <p class="text-[12px] mt-1">$160.00</p>
+      <div class="flex space-x-1 mt-2">
+        <a href="#" class="w-6 h-6 flex justify-center items-center text-red-200 bg-white shadow border rounded-full">
+          <i class="fa fa-circle"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="relative bg-gray-200 mb-4">
+  <div class="container mx-auto flex justify-between items-center px-4">
+    <!-- Heading with space below -->
+    <h4 class="text-lg font-bold text-gray-700 tracking-wide mr-8">UA Newsroom</h4>
+
+    <!-- Navigation Links -->
+
+    <div class="flex space-x-3 mt-2 ml-8 justify-end">
+  <!-- Box for the left arrow -->
+  <a href="#" class="hover:text-gray-400">
+     <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border">
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </div>
+  </a>
+  
+  <!-- Box for the right arrow -->
+  <a href="#" class="hover:text-gray-400">
+    <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border">
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </div>
+  </a>
+</div>
+</div>
+
+ <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-8 mt-4 mb-4">
+    <!-- First Image Block -->
+    <div class="relative text-black ">
+<img src="img2/a1.webp" alt="image"class="w-[310px] h-[300px] object-cover  ">
+<div class="flex border bg-white p-2 shadow-md">
+<div class="flex">
+<a href="#" class="relative mr-[20px] font-semibold text-[16px]">Rise Together:Under Armour Champions Hocus On the Court </a>
+</div>
+<div class="mt-10">
+<i class="fa fa-arrow-right "></i>
+</div>
+
+    </div>
+    </div>
+
+ <div class="relative text-black ">
+<img src="img2/a2.webp" alt="image"class="w-[310px] h-[300px] object-cover  ">
+<div class="flex border bg-white p-2 shadow-md">
+<div class="flex">
+<a href="#" class="relative mr-[20px] font-semibold text-[14px]">Rise Together:Under Armour Champions Hocus On the Court </a>
+</div>
+<div class="mt-10">
+<i class="fa fa-arrow-right "></i>
+</div>
+
+    </div>
+    </div>
+  
+ <div class="relative text-black ">
+<img src="img2/a3.webp" alt="image"class="w-[310px] h-[300px] object-cover  ">
+<div class="flex border bg-white p-2 shadow-md">
+<div class="flex">
+<a href="#" class="relative mr-[20px] font-semibold text-[14px]">Rise Together:Under Armour Champions Hocus On the Court </a>
+</div>
+<div class="mt-10">
+<i class="fa fa-arrow-right "></i>
+</div>
+
+    </div>
+    </div>
+ 
+ <div class="relative text-black ">
+<img src="img2/a4.webp" alt="image"class="w-[310px] h-[300px] object-cover  ">
+<div class="flex border bg-white p-2 shadow-md">
+<div class="flex">
+<a href="#" class="relative mr-[20px] font-semibold text-[14px]">Rise Together:Under Armour Champions Hocus On the Court </a>
+</div>
+<div class="mt-10">
+<i class="fa fa-arrow-right "></i>
+</div>
+
+    </div>
+    </div>
+
+ <div class="relative text-black ">
+<img src="img2/a5.jpeg" alt="image"class="w-[310px] h-[300px] object-cover  ">
+<div class="flex border bg-white p-2 shadow-md">
+<div class="flex">
+<a href="#" class="relative mr-[20px] font-semibold text-[14px]">Rise Together:Under Armour Champions Hocus On the Court </a>
+</div>
+<div class="mt-10">
+<i class="fa fa-arrow-right "></i>
+</div>
+    </div>
+ </div>
+</div>
+ </div>
+   <div class="flex justify-center mt-4">
+    <a href="#" class="font-sans text-base text-[12px] bg-black text-white rounded px-8 py-1 font-semibold">
+      View All
+    </a>
+  </div>
+</section>
+
+<section class="relative mb-12"> 
+   <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
+    <!-- Heading with space below -->
+    <h4 class="text-lg font-bold text-gray-700 tracking-wide mr-8">Shop Bestsellers</h4>
+
+    <!-- Navigation Links -->
+    <nav class="flex-grow">
+      <ul class="flex space-x-24 justify-end"> 
+        <li><a href="#" class="flex items-center font-bold text-gray-700 tracking-wide">Training</a></li>
+        <li><a href="#" class="flex items-center font-bold text-gray-700 tracking-wide">Basketball</a></li>
+        <li><a href="#" class="flex items-center font-bold text-gray-700 tracking-wide">Football</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex space-x-3 mt-2 ml-8 justify-end">
+  <!-- Box for the left arrow -->
+  <a href="#" class="hover:text-gray-400">
+    <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border ">
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </div>
+  </a>
+  
+  <!-- Box for the right arrow -->
+  <a href="#" class="hover:text-gray-400">
+    <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-md shadow border ">
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </div>
+  </a>
+</div>
+</div>
+
+    <!-- First Image Block -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 px-8 mt-4 mb-8">
+
+    <div class="relative text-black ">
+ <img src="img2/p6.webp" alt="image" class="w-[310px] h-[300px] object-cover">
+ <p class="relative font-semibold text-[18px] mr-[65px]"> Men's UA UA Reign 6 Training Shoes</p>
+ <i  class=" text-[10px]">Supports your best high-performance in every move </i> <br>
+ <i class="mr-[20px] text-[12]">$130.00</i>
+
+ <div class="relative mr-[20px] flex space-x-1">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6  text-gray-500 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-gray-200 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-400 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+</div>
+    </div>
+
+ <div class="relative text-black ">
+<img src="img2/hoodie.webp" alt="image"class="w-[310px] h-[300px] object-cover">
+<p class="relative mr-[20px] font-semibold text-[18px]">Women's UA Unstoppable Fleece Hoodie</p>
+ <i  class="relative mr-[20px] text-[10px]">Premium fierce that's smooth and breathable </i> <br>
+  <i class="mr-[20px] text-[12]">$100.00</i>
+ <div class="relative mr-[20px] flex space-x-1">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-gray-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  </div>
+ </div>
+  
+ <div class="relative text-black">
+ <img src="img2/zip.webp" alt="image" class="w-[310px] h-[300px] object-cover">
+ <p class="relative mr-[20px] font-semibold text-[18px]">Men's Unstoppable Fleece Full-Zip </p>
+ <i  class="relative mr-[20px] text-[10px]">Born from high-performance with fledible fabric </i> <br>
+ <i class="mr-[20px] text-[12]">$100.00</i>
+ <div class="relative mr-[20px] flex space-x-1">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+   <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-blue-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-gray-200 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-blue-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  </div>
+ </div>
+ 
+ <div class="relative text-black">
+<img src="img2/p4.webp" alt="image"class="w-[310px] h-[300px] object-cover  ">
+<p class="relative mr-[20px] font-semibold text-[18px]">Men's Legacy black history month Windbreaker</p>
+ <i  class="relative mr-[20px] text-[10px]">Every athlete needs a-go-to Windbreaker-and this is it.</i> <br>
+ <i class="mr-[20px] text-[12]">$90.00</i>
+ <div class="relative mr-[20px] flex space-x-1">
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-black bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-400 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-yellow-400 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-orange-500 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-gray-500 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-500 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-green-500 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-blue-500 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  <a href="#" 
+     class="flex justify-center items-center w-6 h-6 text-red-900 bg-white shadow border  rounded-full focus:ring-2 focus:ring-gray-300 focus:border-gray-400 outline-none">
+    <i class="fa fa-circle"></i>
+  </a>
+  </div>
+ </div>
+</div>
+</section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-6 mt-16">
+      <h1 class="mt-6 text-center tracking-wide text-4xl  ">Stay in The Game</h1>
+<p class="text-center text-[12px] mt-2">Sign up for our latest product drops and promotions.</p>
+
+
+    </div>
+      
+     <div class="flex justify-center items-center mt-6 space-x-2">
+  <!-- Email Input Field -->
+  <div class="flex flex-col mb-0 sm:mb-0">
+    <input type="email" id="email" name="email" placeholder="any@email.com" 
+           class="w-64 px-4 py-1 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500" />
+  </div>
+  
+  <!-- Submit Button with Arrow Icon -->
+  <div>
+    <button type="submit" class="flex items-center justify-center bg-white text-gray-400 p-2 text-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+      SIGN UP
+      <i class="fa fa-arrow-right ml-2"></i>
+    </button>
+  </div>
+</div>
+<!-- Footer Sections: Support, About, Promotions -->
+<div class="relative flex mb-12">
+<img src="./star-removebg-preview.png" alt="logo" class="h-20 bg-white ml-20 mt-16">
+ <!-- Support Section -->
+<div class=" relative block mt-16 text-white">
+ <h4 class=" ml-20 border-b p-1 ">Support</h4>
+ <div class="mt-3 block space-y-2 ml-20 tracking-wide">
+ <a href="#" class="block text-xs ">Help Certer</a>
+ <a href="#" class="block text-xs ">Size Guid</a>
+ <a href="#" class="block text-xs ">Shipping & Delivery</a>
+ <a href="#" class="block text-xs ">Return & Exchange</a>
+ <a href="#" class="block text-xs ">Store Locator</a>
+ <a href="#" class="block text-xs ">Order Tracking</a>
+ <a href="#" class="block text-xs ">Gift Cards</a>
+ <a href="#" class="block text-xs ">Stamap</a>
+ <a href="#" class="block text-xs ">Student discunt</a>
+</div>
+</div>
+
+<div class=" relative block mt-16 text-white">
+<h4 class=" ml-20 border-b p-1">About Under Armour</h4>
+<div class="mt-3 flex space-y-2 ml-22 tracking-wide">
+<div class="mt-3 block space-y-2 ml-20 tracking-wide">
+ <a href="#" class="block text-xs ">Afflate</a>
+ <a href="#" class="block text-xs ">About Us/Our Story</a>
+ <a href="#" class="block text-xs ">UA Rewards</a>
+ <a href="#" class="block text-xs ">Careers</a>
+ <a href="#" class="block text-xs ">UA Community</a>
+ <a href="#" class="block text-xs ">UA Access to Sport</a>
+ <a href="#" class="block text-xs ">Investors</a>
+ <a href="#" class="block text-xs ">Product Recalls</a>
+ <a href="#" class="block text-xs ">Corprate Sales</a>
+</div>
+<div class="mt-3 block space-y-2 ml-10 tracking-wide">
+ <a href="#" class="block text-xs ">UA Newsroom</a>
+ <a href="#" class="block text-xs ">Inovation idea House</a>
+ <a href="#" class="block text-xs ">Do not sell or share my <br>Personal Information</a>
+ <a href="#" class="block text-xs ">UA Blog</a>
+</div>
+</div>
+</div>
+
+<div class=" relative block mt-16 text-white">
+<h4 class=" ml-20 border-b p-1 ">Promotions & Discounts</h4>
+<div class="mt-3 block space-y-2 ml-20 tracking-wide">
+ <a href="#" class="block text-xs ">Student</a>
+ <a href="#" class="block text-xs ">Military</a>
+ <a href="#" class="block text-xs ">Teacher</a>
+ <a href="#" class="block text-xs ">First Responders</a>
+ <a href="#" class="block text-xs ">Birthday</a>
+</div>
+</div>
+ 
+<div class=" relative block mt-20 text-white  space-y-8 ml-20 tracking-wide">
+<a href="https://www.instagram.com" target="_blank" class="hover:text-pink-800 block">
+  <i class="fa-duotone fa-solid fa-camera-retro"></i>  Instagram
+</a>
+
+
+<a href="https://www.facebook.com" target="_blank" class=" hover:text-blue-800 block text-white">
+ <i class="fa-duotone fa-solid fa-camera"></i> Facebook 
+</a>
+
+<a href="https://www.twitter.com" target="_blank" class=" hover:text-blue-600 block ml-1">
+ <i class="fa-duotone fa-solid fa-thumbs-up"></i> twitter
+</a>
+
+<a href="https://www.youtube.com" target="_blank" class=" hover:text-red-800 block">
+  <i class="fa-duotone fa-solid fa-envelope"></i> YouTube 
+</a>
+</div>
+
+</div>
+<hr>
+
+  <div class="container mx-auto text-center space-y-4 flex mt-4 ml-20">
+    <p>&copy; 2024 E-commerce</p> 
+   
+    <div class="flex justify-center space-x-2 ml-3 -translate-y-4 " >
+       <i>/</i>
+      <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+       <i>/</i>
+      <a href="#" class="hover:text-gray-400">Terms of Service</a>
+       <i>/</i>
+      <a href="#" class="hover:text-gray-400">UA Rewards Term</a>
+       <i>/</i>
+      <a href="#" class="hover:text-gray-400">Cookie Prefrences</a>
+       <i>/</i>
+      <a href="#" class="hover:text-gray-400">v2.270</a>
+       
+    </div>
+
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
