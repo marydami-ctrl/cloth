@@ -1,11 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Mobile Menu Toggle
+  // Mobile Menu Toggle (Updated)
   const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = mobileMenuToggle.querySelector("i"); // Select the icon inside the button
 
-  if (mobileMenuToggle && mobileMenu) {
+  if (mobileMenuToggle && mobileMenu && menuIcon) {
     mobileMenuToggle.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
+      const isOpen = mobileMenu.classList.toggle("hidden");
+      this.classList.toggle("active", !isOpen);
+      this.setAttribute("aria-expanded", !isOpen);
+
+      // Toggle between menu (bars) and close (times) icon
+      menuIcon.classList.toggle("fa-bars", isOpen);
+      menuIcon.classList.toggle("fa-times", !isOpen);
+    });
+
+    // Prevent menu from closing when clicking inside
+    mobileMenu.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (
+        !mobileMenu.contains(event.target) &&
+        !mobileMenuToggle.contains(event.target)
+      ) {
+        mobileMenu.classList.add("hidden");
+        mobileMenuToggle.classList.remove("active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+
+        // Reset to menu icon (bars)
+        menuIcon.classList.add("fa-bars");
+        menuIcon.classList.remove("fa-times");
+      }
     });
   }
 
