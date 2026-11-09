@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VELOCITY | Performance Sportswear</title>
+  <title>Performance Sportswear</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
@@ -22,8 +22,10 @@
 
 <!-- Header -->
 <header class="fixed top-0 w-full z-40 bg-black text-white">
-  <div class="container mx-auto flex items-center justify-between px-4 md:px-8 py-4 gap-6">
-    <a href="#top" class="text-2xl font-black tracking-widest" id="brand">VELOCITY</a>
+  <div class="container mx-auto flex items-center justify-between px-4 md:px-8 py-3 gap-6">
+    <a href="#top" class="flex items-center">
+      <img src="./star-removebg-preview.png" alt="Store logo" class="h-10 bg-white rounded p-0.5">
+    </a>
     <nav class="hidden md:block">
       <ul class="flex gap-8 text-sm">
         <li><a href="#hero" class="hover:text-gray-400">New</a></li>
@@ -62,12 +64,9 @@
 <main id="top" class="pt-16">
 
   <!-- Hero -->
-  <section id="hero" class="relative h-[70vh] min-h-[420px] overflow-hidden bg-neutral-800 text-white">
-    <div class="absolute inset-0 grid md:grid-cols-2">
-      <img src="./img/bg 1.jpg" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'">
-      <img src="./img/bg 2.jpg" alt="" class="hidden md:block w-full h-full object-cover" onerror="this.style.display='none'">
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20 flex flex-col items-center justify-center text-center px-4">
+  <section id="hero" class="relative h-[70vh] min-h-[420px] overflow-hidden text-white">
+    <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-700 to-neutral-900"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
       <h1 class="text-5xl md:text-[130px] font-black tracking-tight leading-none fade-in">ULTIMATE</h1>
       <h2 class="text-2xl md:text-4xl font-bold tracking-[.4em] mt-2 fade-in">COMFORT</h2>
       <p class="mt-4 text-lg opacity-90">Rest &amp; Recovery</p>
@@ -102,19 +101,19 @@
 
   <!-- Collections -->
   <section id="collections" class="container mx-auto px-4 md:px-8 pb-14 grid md:grid-cols-2 gap-6">
-    <a href="#shop" data-filter="Shoes" class="navfilter card relative block overflow-hidden bg-neutral-200 h-80">
-      <img src="./div 2/third 1.jpg" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+    <a href="#shop" data-filter="Shoes" class="navfilter card relative block overflow-hidden h-80">
+      <div class="w-full h-full bg-gradient-to-br from-blue-900 to-blue-500"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <div class="absolute bottom-6 left-6 text-white">
-        <h3 class="text-3xl font-black">STOP. POP. SHIMMY</h3>
-        <span class="inline-block mt-3 bg-white text-black text-xs px-4 py-2 rounded">SHOP COURT SHOES <i class="fa fa-arrow-right ml-2"></i></span>
+        <h3 class="text-3xl font-black">COURT COLLECTION</h3>
+        <span class="inline-block mt-3 bg-white text-black text-xs px-4 py-2 rounded">SHOP SHOES <i class="fa fa-arrow-right ml-2"></i></span>
       </div>
     </a>
-    <a href="#shop" data-filter="Women" class="navfilter card relative block overflow-hidden bg-neutral-300 h-80">
-      <img src="./div 2/div3.jpg" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+    <a href="#shop" data-filter="Women" class="navfilter card relative block overflow-hidden h-80">
+      <div class="w-full h-full bg-gradient-to-br from-teal-800 to-teal-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <div class="absolute bottom-6 left-6 text-white">
-        <h3 class="text-3xl font-black">MERIDIAN COLLECTION</h3>
+        <h3 class="text-3xl font-black">WOMEN'S COLLECTION</h3>
         <span class="inline-block mt-3 bg-white text-black text-xs px-4 py-2 rounded">SHOP WOMEN <i class="fa fa-arrow-right ml-2"></i></span>
       </div>
     </a>
@@ -132,6 +131,9 @@
 <!-- Footer -->
 <footer class="bg-black text-white pt-14 pb-6">
   <div class="text-center px-4">
+    <div class="flex justify-center mb-6">
+      <img src="./star-removebg-preview.png" alt="Store logo" class="h-16 bg-white rounded p-1">
+    </div>
     <h2 class="text-3xl md:text-4xl font-black">Stay in The Game</h2>
     <p class="text-xs mt-2 opacity-80">Sign up for product drops and promotions.</p>
     <form id="newsForm" class="flex justify-center gap-2 mt-6" novalidate>
@@ -155,7 +157,7 @@
         <li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fa-brands fa-youtube mr-2"></i>YouTube</a></li></ul></div>
   </div>
   <hr class="border-neutral-800 my-6">
-  <p class="text-center text-xs opacity-70">&copy; <span id="year"></span> VELOCITY. All rights reserved.</p>
+  <p class="text-center text-xs opacity-70">&copy; <span id="year"></span> All rights reserved.</p>
 </footer>
 
 <!-- Overlay -->

@@ -1,6 +1,5 @@
 /* ============ STORE CONFIG (edit these) ============ */
 const CONFIG = {
-  brand: 'VELOCITY',
   currency: '$',
   freeShippingOver: 150,
   flatShipping: 9.99,
@@ -13,28 +12,60 @@ const CONFIG = {
 
 /* ============ PRODUCTS (edit / add yours) ============ */
 const COLORS = {
-  Black:'#111', Maroon:'#7f1d1d', Grey:'#9ca3af', Navy:'#1e3a8a', Sky:'#93c5fd',
-  White:'#e5e7eb', Red:'#f87171', Yellow:'#facc15', Orange:'#f97316', Green:'#22c55e', Blue:'#3b82f6'
+  Black:'#111111', Maroon:'#7f1d1d', Grey:'#9ca3af', Navy:'#1e3a8a', Sky:'#93c5fd',
+  White:'#e5e7eb', Red:'#ef4444', Yellow:'#facc15', Orange:'#f97316', Green:'#22c55e', Blue:'#3b82f6'
 };
 const CLOTHES = ['XS','S','M','L','XL','XXL'];
 const SHOES = ['7','8','9','10','11','12'];
+
+/* Original product drawings (no photos needed) */
+const ART = {
+  shirt: c => `<path d="M140 80 L70 130 L40 290 L85 300 L120 190 L120 340 L280 340 L280 190 L315 300 L360 290 L330 130 L260 80 Q200 115 140 80Z" fill="${c}"/>
+    <path d="M140 80 Q200 125 260 80 Q200 100 140 80Z" fill="rgba(0,0,0,.3)"/>`,
+  jacket: c => `<path d="M140 80 L70 130 L40 290 L85 300 L120 190 L120 340 L280 340 L280 190 L315 300 L360 290 L330 130 L260 80 Q200 115 140 80Z" fill="${c}"/>
+    <path d="M140 80 Q200 125 260 80 Q200 100 140 80Z" fill="rgba(0,0,0,.3)"/>
+    <line x1="200" y1="112" x2="200" y2="340" stroke="rgba(255,255,255,.7)" stroke-width="4"/>
+    <rect x="140" y="250" width="40" height="8" rx="4" fill="rgba(0,0,0,.25)"/><rect x="220" y="250" width="40" height="8" rx="4" fill="rgba(0,0,0,.25)"/>`,
+  hoodie: c => `<path d="M140 90 L70 135 L40 290 L85 300 L120 195 L120 340 L280 340 L280 195 L315 300 L360 290 L330 135 L260 90 Q200 135 140 90Z" fill="${c}"/>
+    <path d="M140 90 Q200 15 260 90 Q200 140 140 90Z" fill="rgba(0,0,0,.22)"/>
+    <rect x="155" y="230" width="90" height="50" rx="10" fill="rgba(0,0,0,.15)"/>
+    <line x1="190" y1="125" x2="190" y2="170" stroke="rgba(255,255,255,.7)" stroke-width="3"/><line x1="210" y1="125" x2="210" y2="170" stroke="rgba(255,255,255,.7)" stroke-width="3"/>`,
+  shoe: c => `<path d="M50 255 L50 195 Q50 170 85 165 L150 150 Q190 195 235 190 L305 205 Q355 215 355 255 Z" fill="${c}"/>
+    <rect x="45" y="252" width="315" height="26" rx="12" fill="#f3f4f6"/>
+    <path d="M150 150 L165 125 L205 135 L190 170Z" fill="rgba(0,0,0,.25)"/>
+    <path d="M95 215 Q200 240 320 225" stroke="rgba(255,255,255,.7)" stroke-width="6" fill="none" stroke-linecap="round"/>`
+};
+function art(type, color){
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'>
+    <defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#f3f4f6'/><stop offset='1' stop-color='#d1d5db'/></linearGradient></defs>
+    <rect width='400' height='400' fill='url(#g)'/>
+    <ellipse cx='200' cy='350' rx='130' ry='14' fill='rgba(0,0,0,.12)'/>
+    ${ART[type](color)}</svg>`;
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+/* Uses your own photo if you set img:'...' on a product, otherwise the drawing */
+const productImg = (p, color) => p.img || art(p.type, COLORS[color || p.colors[0]]);
+
 const PRODUCTS = [
-  { id:1, name:"Men's Meridian Long Sleeve Shirt", cat:['Men'], price:70, img:'img2/p1.webp', colors:['Black','Maroon','Grey'], sizes:CLOTHES, desc:'Soft-touch fabric that still wicks sweat like a champ.' },
-  { id:2, name:"Women's Storm Forefront Rain Jacket", cat:['Women','Sale'], price:70, sale:55.07, img:'img2/p2.jpeg', colors:['Maroon','Sky'], sizes:CLOTHES, desc:'Our most breathable, 100% waterproof jacket.' },
-  { id:3, name:"Women's HeatGear OG Compression Long Sleeve", cat:['Women'], price:40, img:'img2/p3.webp', colors:['Maroon','White','Navy','Black'], sizes:CLOTHES, desc:'Thick, compressive and ultra-cool for training days.' },
-  { id:4, name:"Men's Legacy Windbreaker", cat:['Men'], price:90, img:'img2/p4.webp', colors:['Black','Red','Yellow','Orange','Green','Blue'], sizes:CLOTHES, desc:'Every athlete needs a go-to windbreaker, and this is it.' },
-  { id:5, name:"Court 11 'Dub' Basketball Shoes", cat:['Shoes','Men'], price:160, img:'img2/p6.webp', colors:['Blue'], sizes:SHOES, desc:'Ultimate bounce, grip and stability on court.' },
-  { id:6, name:"Court 11 'Future' Basketball Shoes", cat:['Shoes','Men'], price:160, img:'img2/p7.jpeg', colors:['Black'], sizes:SHOES, desc:'Designed to help every player find their game.' },
-  { id:7, name:"Flow 10 Team Basketball Shoes", cat:['Shoes','Men'], price:160, sale:129, img:'img2/p8.jpeg', colors:['Sky'], sizes:SHOES, desc:'Light and ridiculously grippy.' },
-  { id:8, name:"Court 11 'Wind' Basketball Shoes", cat:['Shoes','Women'], price:160, img:'img2/p9.webp', colors:['Red'], sizes:SHOES, desc:'Springy cushioning for explosive moves.' },
-  { id:9, name:"Men's Reign 6 Training Shoes", cat:['Shoes','Men'], price:130, img:'img2/p6.webp', colors:['Grey','Black','White','Red'], sizes:SHOES, desc:'Supports your best performance in every move.' },
-  { id:10, name:"Women's Unstoppable Fleece Hoodie", cat:['Women'], price:100, sale:79, img:'img2/hoodie.webp', colors:['Maroon','Black','Grey'], sizes:CLOTHES, desc:'Premium fleece that is smooth and breathable.' },
-  { id:11, name:"Men's Unstoppable Fleece Full-Zip", cat:['Men'], price:100, img:'img2/zip.webp', colors:['Maroon','Navy','Black','Grey'], sizes:CLOTHES, desc:'Built for performance with flexible stretch fabric.' },
-  { id:12, name:"Men's Legacy Windbreaker (Classic)", cat:['Men','Sale'], price:90, sale:63, img:'img2/p4.webp', colors:['Black','Red','Green','Blue'], sizes:CLOTHES, desc:'Lightweight, packable and weather ready.' }
+  { id:1, type:'shirt',  name:"Men's Essential Long Sleeve Tee", cat:['Men'], price:70, colors:['Black','Maroon','Grey'], sizes:CLOTHES, desc:'Soft-touch fabric that wicks sweat all day.' },
+  { id:2, type:'jacket', name:"Women's Weatherproof Rain Jacket", cat:['Women','Sale'], price:70, sale:55.07, colors:['Maroon','Sky'], sizes:CLOTHES, desc:'Breathable and fully waterproof.' },
+  { id:3, type:'shirt',  name:"Women's Compression Long Sleeve", cat:['Women'], price:40, colors:['Maroon','White','Navy','Black'], sizes:CLOTHES, desc:'Snug, cool and supportive for training.' },
+  { id:4, type:'jacket', name:"Men's Lightweight Windbreaker", cat:['Men'], price:90, colors:['Black','Red','Yellow','Orange','Green','Blue'], sizes:CLOTHES, desc:'Packable layer for every weather.' },
+  { id:5, type:'shoe',   name:"Baseline Basketball Shoes", cat:['Shoes','Men'], price:160, colors:['Blue'], sizes:SHOES, desc:'Bounce, grip and stability on court.' },
+  { id:6, type:'shoe',   name:"Rebound Basketball Shoes", cat:['Shoes','Men'], price:160, colors:['Black'], sizes:SHOES, desc:'Built to help every player find their game.' },
+  { id:7, type:'shoe',   name:"Flight Team Basketball Shoes", cat:['Shoes','Men'], price:160, sale:129, colors:['Sky'], sizes:SHOES, desc:'Light and ridiculously grippy.' },
+  { id:8, type:'shoe',   name:"Gust Basketball Shoes", cat:['Shoes','Women'], price:160, colors:['Red'], sizes:SHOES, desc:'Springy cushioning for explosive moves.' },
+  { id:9, type:'shoe',   name:"Stride Training Shoes", cat:['Shoes','Men'], price:130, colors:['Grey','Black','White','Red'], sizes:SHOES, desc:'Stable support for every rep and sprint.' },
+  { id:10, type:'hoodie', name:"Women's Fleece Hoodie", cat:['Women'], price:100, sale:79, colors:['Maroon','Black','Grey'], sizes:CLOTHES, desc:'Smooth, breathable fleece for recovery days.' },
+  { id:11, type:'jacket', name:"Men's Fleece Full-Zip", cat:['Men'], price:100, colors:['Maroon','Navy','Black','Grey'], sizes:CLOTHES, desc:'Flexible stretch fabric made to move.' },
+  { id:12, type:'jacket', name:"Men's Classic Windbreaker", cat:['Men','Sale'], price:90, sale:63, colors:['Black','Red','Green','Blue'], sizes:CLOTHES, desc:'Lightweight, packable and weather ready.' }
 ];
-const POSTS = ['a1.webp','a2.webp','a3.webp','a4.webp'].map((f,i)=>({
-  img:'img2/'+f, title:['Rise Together: Champions on the Court','Behind the Design: Recovery Wear','Train Smarter: 5 Tips for Winter','Meet the Athletes of the Season'][i]
-}));
+const POSTS = [
+  { title:'Training Tips for the Rainy Season', from:'#111827', to:'#4b5563', icon:'fa-person-running' },
+  { title:'Behind the Design: Recovery Wear',   from:'#7f1d1d', to:'#b45309', icon:'fa-dumbbell' },
+  { title:'Court Style: How to Pick Your Shoes', from:'#1e3a8a', to:'#3b82f6', icon:'fa-basketball' },
+  { title:'Meet the Athletes of the Season',     from:'#065f46', to:'#34d399', icon:'fa-trophy' }
+];
 
 /* ============ HELPERS ============ */
 const $ = (s, r=document) => r.querySelector(s);
@@ -73,7 +104,7 @@ function renderGrid(){
   $('#grid').innerHTML = list.map(p => `
     <article class="card fade-in group">
       <div class="relative overflow-hidden bg-gray-100 aspect-square cursor-pointer" data-open="${p.id}">
-        ${imgTag(p.img,'w-full h-full object-cover')}
+        ${imgTag(productImg(p),'w-full h-full object-cover')}
         ${p.sale?'<span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded">SALE</span>':''}
         <button data-wish="${p.id}" aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white shadow flex items-center justify-center">
           <i class="fa-${wish.includes(p.id)?'solid text-red-500':'regular'} fa-heart"></i></button>
@@ -88,7 +119,7 @@ function renderGrid(){
 function renderPosts(){
   $('#posts').innerHTML = POSTS.map(p => `
     <a href="#" class="card block bg-white shadow-sm overflow-hidden">
-      <div class="overflow-hidden aspect-[4/3] bg-gray-200">${imgTag(p.img,'w-full h-full object-cover')}</div>
+      <div class="aspect-[4/3] flex items-center justify-center text-white text-5xl" style="background:linear-gradient(135deg,${p.from},${p.to})"><i class="fa-solid ${p.icon}"></i></div>
       <div class="p-3 flex justify-between gap-3 text-sm font-semibold"><span>${p.title}</span><i class="fa fa-arrow-right mt-1"></i></div>
     </a>`).join('');
 }
@@ -98,7 +129,6 @@ let current = null, selColor = null, selSize = null;
 function openModal(id){
   current = PRODUCTS.find(p=>p.id===id); if(!current) return;
   selColor = current.colors[0]; selSize = null;
-  $('#mImg').src = current.img; $('#mImg').onerror = function(){ this.onerror=null; this.src=PLACEHOLDER; };
   $('#mCat').textContent = current.cat.filter(c=>c!=='Sale').join(' / ');
   $('#mName').textContent = current.name;
   $('#mPrice').innerHTML = current.sale ? `<span class="line-through text-gray-400 mr-2">${money(current.price)}</span><span class="text-red-600 font-bold">${money(current.sale)}</span>` : `<b>${money(current.price)}</b>`;
@@ -108,6 +138,7 @@ function openModal(id){
   $('#modal').classList.replace('hidden','flex'); $('#overlay').classList.remove('hidden');
 }
 function paintModalOptions(){
+  $('#mImg').src = productImg(current, selColor);
   $('#mColorName').textContent = selColor;
   $('#mColors').innerHTML = current.colors.map(c=>`<button data-color="${c}" title="${c}" class="swatch w-8 h-8 rounded-full border ${c===selColor?'active':''}" style="background:${COLORS[c]}"></button>`).join('');
   $('#mSizes').innerHTML = current.sizes.map(s=>`<button data-size="${s}" class="size min-w-[44px] px-3 py-2 border text-sm hover:border-black ${s===selSize?'active':''}">${s}</button>`).join('');
@@ -144,7 +175,7 @@ function renderCart(){
   $('#drawerBody').innerHTML = cart.length ? cart.map(i=>{
     const p = PRODUCTS.find(x=>x.id===i.id);
     return `<div class="flex gap-4">
-      <div class="w-20 h-20 bg-gray-100 shrink-0">${imgTag(p.img,'w-full h-full object-cover')}</div>
+      <div class="w-20 h-20 bg-gray-100 shrink-0">${imgTag(productImg(p, i.color),'w-full h-full object-cover')}</div>
       <div class="flex-1 text-sm">
         <p class="font-semibold leading-snug">${p.name}</p>
         <p class="text-xs text-gray-500">${i.color} / ${i.size}</p>
@@ -228,8 +259,6 @@ $('#newsForm').onsubmit = e => {
 };
 
 /* ============ INIT ============ */
-document.title = CONFIG.brand + ' | Performance Sportswear';
-$('#brand').textContent = CONFIG.brand;
 $('#year').textContent = new Date().getFullYear();
 $('#freeShipLabel').textContent = money(CONFIG.freeShippingOver);
 renderChips(); renderGrid(); renderPosts(); renderCart(); renderWish();
